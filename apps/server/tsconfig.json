@@ -1,14 +1,14 @@
 {
 	"compilerOptions": {
 		"target": "ES2022",
-		"module": "NodeNext",
+		"module": "ESNext",
 		"moduleDetection": "force",
 		"esModuleInterop": false,
 		"verbatimModuleSyntax": true,
 		"allowJs": false,
 		"rewriteRelativeImportExtensions": true,
 		"erasableSyntaxOnly": true,
-		"moduleResolution": "NodeNext",
+		"moduleResolution": "Bundler",
 		"allowImportingTsExtensions": true,
 		"noEmit": true,
 		"strict": true,
