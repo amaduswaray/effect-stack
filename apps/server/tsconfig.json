@@ -1,0 +1,36 @@
+{
+	"compilerOptions": {
+		"target": "ES2022",
+		"module": "NodeNext",
+		"moduleDetection": "force",
+		"esModuleInterop": false,
+		"verbatimModuleSyntax": true,
+		"allowJs": false,
+		"rewriteRelativeImportExtensions": true,
+		"erasableSyntaxOnly": true,
+		"moduleResolution": "NodeNext",
+		"allowImportingTsExtensions": true,
+		"noEmit": true,
+		"strict": true,
+		"exactOptionalPropertyTypes": true,
+		"noUnusedLocals": true,
+		"noImplicitOverride": true,
+		"noFallthroughCasesInSwitch": true,
+		"skipLibCheck": true,
+		"noErrorTruncation": true,
+		"types": ["bun"],
+		"baseUrl": ".",
+		"paths": {
+			"@shared/*": ["../../packages/shared/src/*"],
+			"@server/*": ["./src/*"]
+		},
+		"plugins": [
+			{
+				"name": "@effect/language-service",
+				"transform": "@effect/language-service/transform",
+				"namespaceImportPackages": ["effect", "@effect/*"]
+			}
+		]
+	},
+	"include": ["src", "../../packages/shared/src"]
+}

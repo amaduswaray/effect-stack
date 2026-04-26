@@ -1,0 +1,61 @@
+{
+	"name": "fullstack-effect",
+	"private": true,
+	"version": "0.0.0",
+	"type": "module",
+	"packageManager": "bun@1.3.1",
+	"workspaces": [
+		"apps/*",
+		"packages/*"
+	],
+	"scripts": {
+		"dev": "turbo run dev",
+		"dev:client": "turbo run dev --filter=@repo/web",
+		"dev:server": "turbo run dev --filter=@repo/server",
+		"build": "turbo run build",
+		"typecheck": "turbo run typecheck",
+		"test": "turbo run test",
+		"lint": "biome check .",
+		"lint:fix": "biome check --write .",
+		"format": "biome format --write .",
+		"format:check": "biome format .",
+		"preview": "turbo run preview",
+		"prepare": "effect-language-service patch"
+	},
+	"dependencies": {
+		"@effect-atom/atom-react": "^0.3.4",
+		"@effect/platform": "^0.92.1",
+		"@effect/platform-browser": "^0.72.0",
+		"@effect/platform-bun": "^0.81.1",
+		"@effect/rpc": "^0.71.1",
+		"@effect/sql": "^0.46.0",
+		"@effect/sql-sqlite-bun": "^0.47.0",
+		"@number-flow/react": "^0.5.10",
+		"@phosphor-icons/react": "^2.1.10",
+		"@tailwindcss/vite": "^4.1.16",
+		"@tanstack/react-router": "^1.168.24",
+		"concurrently": "^9.2.1",
+		"effect": "^3.18.4",
+		"motion": "^12.23.24",
+		"react": "^19.1.1",
+		"react-dom": "^19.1.1",
+		"tailwindcss": "^4.1.16"
+	},
+	"devDependencies": {
+		"@biomejs/biome": "^2.3.2",
+		"@effect/language-service": "^0.51.0",
+		"@effect/sql-sqlite-node": "^0.47.0",
+		"@effect/vitest": "^0.26.0",
+		"@tanstack/router-plugin": "^1.167.27",
+		"@types/bun": "^1.3.1",
+		"@types/node": "^24.6.0",
+		"@types/react": "^19.1.16",
+		"@types/react-dom": "^19.1.9",
+		"@vitejs/plugin-react": "^5.0.4",
+		"babel-plugin-react-compiler": "^19.1.0-rc.3",
+		"baseline-browser-mapping": "^2.10.22",
+		"turbo": "^2.5.4",
+		"typescript": "~5.9.3",
+		"vite": "^7.1.12"
+	}
+}
